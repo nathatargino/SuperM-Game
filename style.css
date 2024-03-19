@@ -1,0 +1,161 @@
+@font-face {
+    font-family: 'fonteMario';
+    src: url('fonts/PressStart2P-Regular.ttf') format('truetype');
+}
+body * html {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    width: 100vw;
+    height: 100vh;
+    margin: 0;
+    background-color: #6B73FA;
+    font-family: 'fonteMario', sans-serif;
+}
+
+.gameboard {
+    width: 80%;
+    height: 500px;
+    background: linear-gradient(#87CEEB,#E0F6FF);
+    border-bottom: 10px solid rgb(30, 139, 8);
+    margin: 0 auto;
+    position: relative;
+    overflow: hidden;
+    transform: translateY(50%);
+}
+
+.mario {
+    width: 155px;
+    position: absolute;
+    bottom: 0;
+    filter: initial;
+}
+
+.pontuacao {
+    padding-top: 10px;
+}
+
+.pontos {
+    padding-top: 10px;
+}
+
+.jump {
+    animation: jump 600ms;
+}
+
+.nuvem {
+    position: absolute;
+    top: 05%;
+    width: 300px;
+    animation: run2 10s infinite linear;
+}
+
+.cano {
+    position: absolute;
+    width: 80px;
+    height: 17%;
+    bottom: 0;
+    right: 0;
+    animation: run 1.5s infinite linear;
+}
+
+.msg-loser {
+    display: flex;
+    position: relative;
+    width: 330px;
+    height: 250px;
+    border: #87CEEB;
+    background-image: url(assets/gameover.jpg);
+    background-size: cover;
+    
+    text-align: center;
+    margin: 0 auto;
+    border-radius: 15px; 
+}
+
+
+.msg-loser > button {
+    border-radius: 7px;
+    border: none;
+    padding: 7px;
+    font-weight: bold;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    
+}
+
+.msg-loser > button:hover {
+    background-color: #dddddd;
+}
+
+
+p {
+    display: flex;
+    flex-direction: row-reverse;
+    font-size: 18pt;
+    font-weight: bolder;
+    
+}
+
+a {
+    text-decoration: none;
+    color: black;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+footer {
+    display: flex;
+    justify-content: center;
+    position: absolute;
+    bottom: 0;
+    width: 100vw; 
+    padding-bottom: 5px;
+    
+}
+
+@keyframes run {
+    from {
+        right: -80px;
+    } 
+    to {
+        right: 100%;
+    }
+
+}
+
+@keyframes run2 {
+    from {
+        right: -300px;
+    } 
+    to {
+        right: 100%;
+    }
+
+}
+
+@keyframes jump {
+    0% {
+        bottom: 0px;
+    } 
+    40% {
+        bottom: 180px;
+    }
+    50% {
+        bottom: 180px;
+    }
+    60%{
+        bottom: 180px;
+    }
+    100% {
+        bottom: 0px;
+    }
+
+}
